@@ -17,12 +17,8 @@ interface Order {
     name: string
     role: string
   }
-  projectName: string
-  team: {
-    images: string[]
-  }
+  groupCare: string
   status: string
-  budget: string
 }
 
 // Define the table data using the interface
@@ -34,11 +30,7 @@ const tableData: Order[] = [
       name: 'Lindsey Curtis',
       role: 'Web Designer',
     },
-    projectName: 'Agency Website',
-    team: {
-      images: ['/images/user/user-22.jpg', '/images/user/user-23.jpg', '/images/user/user-24.jpg'],
-    },
-    budget: '3.9K',
+    groupCare: 'Agency Website',
     status: 'Active',
   },
   {
@@ -48,11 +40,7 @@ const tableData: Order[] = [
       name: 'Kaiya George',
       role: 'Project Manager',
     },
-    projectName: 'Technology',
-    team: {
-      images: ['/images/user/user-25.jpg', '/images/user/user-26.jpg'],
-    },
-    budget: '24.9K',
+    groupCare: 'Technology',
     status: 'Pending',
   },
   {
@@ -62,11 +50,7 @@ const tableData: Order[] = [
       name: 'Zain Geidt',
       role: 'Content Writing',
     },
-    projectName: 'Blog Writing',
-    team: {
-      images: ['/images/user/user-27.jpg'],
-    },
-    budget: '12.7K',
+    groupCare: 'Blog Writing',
     status: 'Active',
   },
   {
@@ -76,11 +60,7 @@ const tableData: Order[] = [
       name: 'Abram Schleifer',
       role: 'Digital Marketer',
     },
-    projectName: 'Social Media',
-    team: {
-      images: ['/images/user/user-28.jpg', '/images/user/user-29.jpg', '/images/user/user-30.jpg'],
-    },
-    budget: '2.8K',
+    groupCare: 'Social Media',
     status: 'Cancel',
   },
   {
@@ -90,14 +70,9 @@ const tableData: Order[] = [
       name: 'Carla George',
       role: 'Front-end Developer',
     },
-    projectName: 'Website',
-    team: {
-      images: ['/images/user/user-31.jpg', '/images/user/user-32.jpg', '/images/user/user-33.jpg'],
-    },
-    budget: '4.5K',
+    groupCare: 'Website',
     status: 'Active',
   },
-  // Additional sample data for pagination demo
   {
     id: 6,
     user: {
@@ -105,11 +80,7 @@ const tableData: Order[] = [
       name: 'Marcus Johnson',
       role: 'Backend Developer',
     },
-    projectName: 'API Development',
-    team: {
-      images: ['/images/user/user-22.jpg', '/images/user/user-23.jpg'],
-    },
-    budget: '8.2K',
+    groupCare: 'API Development',
     status: 'Active',
   },
   {
@@ -119,11 +90,7 @@ const tableData: Order[] = [
       name: 'Sarah Miller',
       role: 'UX Designer',
     },
-    projectName: 'Mobile App',
-    team: {
-      images: ['/images/user/user-24.jpg', '/images/user/user-25.jpg', '/images/user/user-26.jpg'],
-    },
-    budget: '15.3K',
+    groupCare: 'Mobile App',
     status: 'Pending',
   },
   {
@@ -133,11 +100,7 @@ const tableData: Order[] = [
       name: 'David Wilson',
       role: 'DevOps Engineer',
     },
-    projectName: 'Infrastructure',
-    team: {
-      images: ['/images/user/user-27.jpg'],
-    },
-    budget: '6.1K',
+    groupCare: 'Infrastructure',
     status: 'Active',
   },
   {
@@ -147,11 +110,7 @@ const tableData: Order[] = [
       name: 'Emily Brown',
       role: 'QA Engineer',
     },
-    projectName: 'Testing Suite',
-    team: {
-      images: ['/images/user/user-28.jpg', '/images/user/user-29.jpg'],
-    },
-    budget: '3.4K',
+    groupCare: 'Testing Suite',
     status: 'Cancel',
   },
   {
@@ -161,11 +120,7 @@ const tableData: Order[] = [
       name: 'Michael Davis',
       role: 'Full Stack Developer',
     },
-    projectName: 'E-commerce Platform',
-    team: {
-      images: ['/images/user/user-30.jpg', '/images/user/user-31.jpg', '/images/user/user-32.jpg'],
-    },
-    budget: '22.5K',
+    groupCare: 'E-commerce Platform',
     status: 'Active',
   },
   {
@@ -175,11 +130,7 @@ const tableData: Order[] = [
       name: 'Jessica Taylor',
       role: 'Product Manager',
     },
-    projectName: 'Product Launch',
-    team: {
-      images: ['/images/user/user-22.jpg', '/images/user/user-23.jpg'],
-    },
-    budget: '18.0K',
+    groupCare: 'Product Launch',
     status: 'Pending',
   },
   {
@@ -189,11 +140,7 @@ const tableData: Order[] = [
       name: 'Chris Anderson',
       role: 'Data Analyst',
     },
-    projectName: 'Analytics Dashboard',
-    team: {
-      images: ['/images/user/user-24.jpg'],
-    },
-    budget: '7.8K',
+    groupCare: 'Analytics Dashboard',
     status: 'Active',
   },
   {
@@ -203,11 +150,7 @@ const tableData: Order[] = [
       name: 'Amanda White',
       role: 'Content Strategist',
     },
-    projectName: 'Content Marketing',
-    team: {
-      images: ['/images/user/user-25.jpg', '/images/user/user-26.jpg'],
-    },
-    budget: '5.2K',
+    groupCare: 'Content Marketing',
     status: 'Active',
   },
   {
@@ -217,11 +160,7 @@ const tableData: Order[] = [
       name: 'Robert Martinez',
       role: 'Security Specialist',
     },
-    projectName: 'Security Audit',
-    team: {
-      images: ['/images/user/user-27.jpg', '/images/user/user-28.jpg'],
-    },
-    budget: '11.5K',
+    groupCare: 'Security Audit',
     status: 'Pending',
   },
   {
@@ -231,11 +170,7 @@ const tableData: Order[] = [
       name: 'Laura Garcia',
       role: 'UI Designer',
     },
-    projectName: 'Design System',
-    team: {
-      images: ['/images/user/user-29.jpg', '/images/user/user-30.jpg', '/images/user/user-31.jpg'],
-    },
-    budget: '9.7K',
+    groupCare: 'Design System',
     status: 'Active',
   },
   {
@@ -245,11 +180,7 @@ const tableData: Order[] = [
       name: 'Daniel Lee',
       role: 'Mobile Developer',
     },
-    projectName: 'iOS App',
-    team: {
-      images: ['/images/user/user-32.jpg', '/images/user/user-33.jpg'],
-    },
-    budget: '14.2K',
+    groupCare: 'iOS App',
     status: 'Active',
   },
   {
@@ -259,11 +190,7 @@ const tableData: Order[] = [
       name: 'Nicole Harris',
       role: 'Scrum Master',
     },
-    projectName: 'Agile Training',
-    team: {
-      images: ['/images/user/user-22.jpg'],
-    },
-    budget: '4.0K',
+    groupCare: 'Agile Training',
     status: 'Cancel',
   },
   {
@@ -273,11 +200,7 @@ const tableData: Order[] = [
       name: 'James Clark',
       role: 'Solutions Architect',
     },
-    projectName: 'Cloud Migration',
-    team: {
-      images: ['/images/user/user-23.jpg', '/images/user/user-24.jpg', '/images/user/user-25.jpg'],
-    },
-    budget: '28.0K',
+    groupCare: 'Cloud Migration',
     status: 'Active',
   },
   {
@@ -287,11 +210,7 @@ const tableData: Order[] = [
       name: 'Stephanie Lewis',
       role: 'Business Analyst',
     },
-    projectName: 'Requirements Gathering',
-    team: {
-      images: ['/images/user/user-26.jpg', '/images/user/user-27.jpg'],
-    },
-    budget: '6.5K',
+    groupCare: 'Requirements Gathering',
     status: 'Pending',
   },
   {
@@ -301,11 +220,7 @@ const tableData: Order[] = [
       name: 'Kevin Robinson',
       role: 'Technical Writer',
     },
-    projectName: 'Documentation',
-    team: {
-      images: ['/images/user/user-28.jpg'],
-    },
-    budget: '3.2K',
+    groupCare: 'Documentation',
     status: 'Active',
   },
   {
@@ -315,11 +230,7 @@ const tableData: Order[] = [
       name: 'Rachel Walker',
       role: 'Frontend Developer',
     },
-    projectName: 'Dashboard Redesign',
-    team: {
-      images: ['/images/user/user-29.jpg', '/images/user/user-30.jpg'],
-    },
-    budget: '10.8K',
+    groupCare: 'Dashboard Redesign',
     status: 'Active',
   },
   {
@@ -329,11 +240,7 @@ const tableData: Order[] = [
       name: 'Andrew Hall',
       role: 'Database Admin',
     },
-    projectName: 'Database Optimization',
-    team: {
-      images: ['/images/user/user-31.jpg', '/images/user/user-32.jpg', '/images/user/user-33.jpg'],
-    },
-    budget: '7.3K',
+    groupCare: 'Database Optimization',
     status: 'Pending',
   },
   {
@@ -343,11 +250,7 @@ const tableData: Order[] = [
       name: 'Michelle Young',
       role: 'Marketing Manager',
     },
-    projectName: 'Campaign Launch',
-    team: {
-      images: ['/images/user/user-22.jpg', '/images/user/user-23.jpg'],
-    },
-    budget: '12.0K',
+    groupCare: 'Campaign Launch',
     status: 'Active',
   },
   {
@@ -357,11 +260,7 @@ const tableData: Order[] = [
       name: 'Thomas King',
       role: 'Systems Engineer',
     },
-    projectName: 'Network Setup',
-    team: {
-      images: ['/images/user/user-24.jpg'],
-    },
-    budget: '8.9K',
+    groupCare: 'Network Setup',
     status: 'Cancel',
   },
   {
@@ -371,11 +270,7 @@ const tableData: Order[] = [
       name: 'Elizabeth Scott',
       role: 'HR Coordinator',
     },
-    projectName: 'Onboarding System',
-    team: {
-      images: ['/images/user/user-25.jpg', '/images/user/user-26.jpg'],
-    },
-    budget: '5.6K',
+    groupCare: 'Onboarding System',
     status: 'Active',
   },
 ]
@@ -441,8 +336,7 @@ export default function BasicTableOne() {
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell className="text-theme-sm px-4 py-3 text-start text-gray-500 dark:text-gray-400">{order.projectName}</TableCell>
-               
+                  <TableCell className="text-theme-sm px-4 py-3 text-start text-gray-500 dark:text-gray-400">{order.groupCare}</TableCell>
                   <TableCell className="text-theme-sm px-4 py-3 text-start text-gray-500 dark:text-gray-400">
                     <Badge size="sm" color={order.status === 'Active' ? 'success' : order.status === 'Pending' ? 'warning' : 'error'}>
                       {order.status}
