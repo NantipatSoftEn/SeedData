@@ -59,12 +59,14 @@ const BlessingStatData = [
 
 export default function BlessingStat({ score }: { readonly score: GiftFromGod | null | undefined }) {
   const updateBlessingData = (blessingData: any[], score: GiftFromGod | null | undefined) => {
-    for (const blessing of blessingData) {
+    return blessingData.map((blessing) => {
       const key = blessing.englishName as keyof GiftFromGod
-      blessing.score = score ? (score[key] as number) : 0
-      blessing.name = blessing.thaiName
-    }
-    return blessingData
+      return {
+        ...blessing,
+        score: score ? score[key] : 0,
+        name: blessing.thaiName,
+      }
+    })
   }
 
   const BlessingData = updateBlessingData(BlessingStatData, score)
@@ -84,7 +86,7 @@ export default function BlessingStat({ score }: { readonly score: GiftFromGod | 
         <div className="h-[800px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={BlessingData} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-              <XAxis type="number" domain={[0, 15]} />
+              <XAxis type="number" domain={[1, 15]} />
               <YAxis dataKey="name" type="category" width={170} />
               <Tooltip />
               <Bar dataKey="score" fill="#4F46E5" />
