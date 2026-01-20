@@ -1,5 +1,6 @@
 import UserAddressCard from '@/components/user-profile/UserAddressCard'
 import UserBlessingStatCard from '@/components/user-profile/UserBlessingStatCard'
+import UserChapterCard from '@/components/user-profile/UserChapterCard'
 import UserInfoCard from '@/components/user-profile/UserInfoCard'
 import UserMetaCard from '@/components/user-profile/UserMetaCard'
 import { Metadata } from 'next'
@@ -20,6 +21,7 @@ export default function Profile() {
           <UserInfoCard />
           <UserAddressCard />
           <UserBlessingStatCard/>
+          <UserChapterCard />
         </div>
       </div>
     </div>
